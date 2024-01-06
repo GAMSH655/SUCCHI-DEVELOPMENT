@@ -14,9 +14,8 @@ body {
      align-items: center;
      padding-top: 40px;
 }
-.nav-container ul {
+.nav-container  .UL {
      display: flex;
-     justify-content: space-evenly;
      list-style: none;
 }
  ul li {
@@ -38,7 +37,27 @@ a:hover {
  .fa-chevron-down{
      padding-left: 10px;
  }
- #call-btn{
+.nested-ul{
+   display: none;
+   background-color: #03e230;
+   list-style: none;
+   border-radius: 10px;
+}
+/*  NESTED NAVBAR  */
+.nested-ul li {
+     border: none;
+     border-bottom: 1.5px black solid;
+}
+li:last-child {
+     border-bottom: none;
+  border-bottom: none;
+}
+.list3:hover .nested-ul {
+ display:block;
+}
+
+/* END OF THE CODE */
+#call-btn{
      width: 170px;
      height: 40px;
      border-radius: 50px;
