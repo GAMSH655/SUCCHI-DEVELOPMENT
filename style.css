@@ -37,26 +37,9 @@ a:hover {
  .fa-chevron-down{
      padding-left: 10px;
  }
-.nested-ul{
-   display: none;
-   background-color: #03e230;
-   list-style: none;
-   border-radius: 10px;
-}
-/*  NESTED NAVBAR  */
-.nested-ul li {
-     border: none;
-     border-bottom: 1.5px black solid;
-}
-li:last-child {
-     border-bottom: none;
-  border-bottom: none;
-}
-.list3:hover .nested-ul {
- display:block;
-}
-
-/* END OF THE CODE */
+ .mobile-view-Nav {
+     display: none ;
+ }
 #call-btn{
      width: 170px;
      height: 40px;
@@ -217,7 +200,7 @@ sup{
      padding-left: 15px;
      padding-top: 10px;
 }
-.inner-text {
+.inner-text1 , .inner-text2 {
      text-align: center;
      color: black;
      text-align: center;
@@ -225,6 +208,23 @@ sup{
      font-weight:bolder;
      text-transform: capitalize;
      padding-top: 29px;
+}
+.btn-cont{
+     width: 200px;
+     margin: 0 auto;
+     padding: 10px;
+}
+
+#leftbtn , #rightbtn{
+    width: 70px;
+    height: 75px;
+    font-size: large;
+    background-color: green;
+    border-radius: 90px;
+    border: none;
+    font-size: x-large;
+    font-weight: bolder ;
+    margin: 10px;
 }
 .sect-2 {
      margin-top: 200px;
@@ -559,17 +559,59 @@ sup{
          display: block;
          background-color: transparent;
          color: black;
+        }
+        .nav-container{
+            display: none;
+            list-style: none;
+        }
+        .control-container {
+             display:none;
+        }
+        .control-container-mobile{
+            display: block;
+            margin-top: 20px;
+        }
+        .un-ordered-list-nav{
+            list-style: none;
+       }
+       #call-btn {
+            margin: 10px;
+       }
+       .cancel-button{
+        width: 170px;
+        height: 40px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-size: medium;
+        font-weight: bold;
+        text-transform: capitalize;
+        color: white;
+        background-color: #03e230;
+        border: none;
+        margin:10px ;
     }
-    .nav-container {
-        background-color: red;
-        display: none;
-    }
-    .control-container {
-         display: none;
-    }
+        .mobile-view-Nav{
+            width: 300px;
+            height: 100vh;
+            position: relative;
+            background-color: bisque;
+            box-shadow: 5px -5px 0px 0px rgba(41, 40, 39, 0.76);
+            border-radius: 20px;
+            margin: 20px;
+
+
+            animation: mobileHamburber;
+            animation-duration: 5s;
+            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        @keyframes   mobileHamburber {
+            0%{transform: translateX(-80px);}
+        }
     .section-1 {
         display: flex;
         flex-wrap: wrap;
+        position: relative;
+        z-index: 1;
     }
     #suchi-text-1 {
         font-size: 1.5rem;
@@ -598,10 +640,11 @@ sup{
     }
     .big-food-container {
          position: absolute;
-        inset: 0;
+          
+        z-index: 999;
     }
     sup{
-        position: relative;
+        position: ;
         top: 60rem;
         left: 2rem;
     }
